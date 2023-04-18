@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+header{
+    background-color: white;
+    height: fit-content;
+}
+#logo{
+    width: 10vw;
+    min-width: 30px;
+    margin: 2vh;
+}
+header i{
+    font-size: 6vw;
+    width: 10vw;
+    min-width: 30px;
+    margin: 2vh;
+
+    cursor: pointer;
+    position: relative;
+    float: right;
+    background-color: blue;
+}
+.escondido{
+    display: none;
+}
+nav {
+    background-color: goldenrod;
+}
+nav:hover {
+    color: white;
+    display: block;
+}
+i:hover + nav{
+    color: wheat;
+    display: block;
+}
+/* fin header */
+#fotoEntrada{
+    background-image: url('img/Dia_Trineos.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#definicion{
+    text-align: center;
+    color: black;
+    height: 50vh;
+}
+#somos{
+    
+    height: auto;
+    justify-content: center;
+    text-align: center;
+}
+.seccionExplicativa{
+    background-color: wheat;
+    width: 30%;
+    float: left;
+    text-align: center;
+    align-items: center;
+    padding: 1vw;
+    margin: 1vw;
+}
+.seccionExplicativa .icono{
+    width: 100px;
+    margin: auto;
+}
+.seccionExplicativa .icono img{
+    width: 6vw;
+    /* border-radius: 8vw; */
+    margin: 1vh;
+    padding: 1vh;
+    min-width: 30px;
+}
+.seccionExplicativa hr{
+    border: 2px dashed black;
+}
+/* creacion del grid de fotos */
+#gridFotos{
+    background-color: white;
+    margin: 10%;
+    width: 80%;
+    height: 80vh;
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: 2;
+}
+#A1{
+    background-color: white;
+    grid-row:1;
+    grid-column:1;
+}
+#A2{
+    background-color: white;
+    grid-row:1;
+    grid-column:2;
+}
+#B1{
+    background-color: white;
+    grid-row:2;
+    grid-column:1;
+}
+#B1{
+    background-color: white;
+    grid-row: 2;
+    grid-column: 2;
+}
+#gridFotos img{
+    width: 100%;
+    padding: 2vh;
+}
+
+
+
