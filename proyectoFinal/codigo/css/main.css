@@ -41,7 +41,7 @@ i:hover + nav{
 }
 /* fin header */
 #fotoEntrada{
-    background-image: url('img/Dia_Trineos.jpg');
+    background-image: url('../img/Dia_Trineos.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center center;
