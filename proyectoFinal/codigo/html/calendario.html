@@ -5,66 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario</title>
+    <link rel="stylesheet" href="../css/calendario.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </head>
 <body>
-  <!-- <table class="table">
-        <thead>
-          <tr>
-            <th>Dom</th>
-            <th>Lun</th>
-            <th>Mar</th>
-            <th>Mié</th>
-            <th>Jue</th>
-            <th>Vie</th>
-            <th>Sáb</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table> -->
-      <h1>Calendario con javascript</h1>
-      <br/><br/>
-      <div id="calendario">
-        <div id="anterior" onclick="mesantes()"></div>
-        <div id="posterior" onclick="mesdespues()"></div>
-        <h2 id="titulos"></h2>
-        <table id="diasc">
-          <tr id="fila0"><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
-          <tr id="fila1"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr id="fila2"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr id="fila3"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr id="fila4"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr id="fila5"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr id="fila6"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        </table>
-        <div id="fechaactual"><i onclick="actualizar()">HOY: </i></div>
-        <div id="buscafecha">
-          <form action="#" name="buscar">
-            <p>Buscar ... MES
-              <select name="buscames">
-                <option value="0">Enero</option>
-                <option value="1">Febrero</option>
-                <option value="2">Marzo</option>
-                <option value="3">Abril</option>
-                <option value="4">Mayo</option>
-                <option value="5">Junio</option>
-                <option value="6">Julio</option>
-                <option value="7">Agosto</option>
-                <option value="8">Septiembre</option>
-                <option value="9">Octubre</option>
-                <option value="10">Noviembre</option>
-                <option value="11">Diciembre</option>
-              </select>
-            ... AÑO ...
-              <input type="text" name="buscaanno" maxlength="4" size="4" />
-            ... 
-              <input type="button" value="BUSCAR" onclick="mifecha()" />
-            </p>
-          </form>
+  <div id="contenido">
+    <div id="informacion">
+      <h1>info</h1>
+    </div>
+    <div id="calendario">
+      <div id="cabecera">
+          <span id="titulo"></span>
+          <span id="ant"></span>
+          <span id="sig"></span>
+      </div>
+      <div id="celdas">
+        <div class="filaDiasLetra">
+            <div id="diaL">
+              <h4>lunes</h4>
+            </div>
+            <div id="diaL">
+              <h4>lunes</h4>
+            </div>
+            <div id="diaL">
+              <h4>lunes</h4>
+            </div>
+            <div id="diaL">
+              <h4>lunes</h4>
+            </div>
+        </div>
+        <div class="fila">
+          <div class="dia">
+            <h6>1</h6>
+            <span class="actividad">futbol</span>
+          </div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
         </div>
       </div>
-</body>
+      </div>   
+    </div>
+  </div>
+    
 <script src="../js/calendario.js"></script>
 </html>
