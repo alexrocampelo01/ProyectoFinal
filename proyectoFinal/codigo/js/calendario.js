@@ -46,31 +46,44 @@ function primeraSemana(){
     let priDiaMes = new Date(anohoy,mesHoy,"1"); //primer dia de cada mes
     let priDiaLSemana = priDiaMes.getDay(); //cojemos el nuemro
     //console.log(diassemana[priDiaLSemana]);
+    //controlamos el paso de lunes a domingo
+    if (priDiaLSemana==-1) {priDiaLSemana=6;}
     //buscamos numero primer dia
     let priDiaNMes = priDiaMes.getDate();
     let fechCelda = priDiaNMes - priDiaLSemana;
     empezar = priDiaMes.setDate(fechCelda);
+    console.log(empezar);
     diaMes = new Date();
     diaMes.setTime(empezar);  
     console.log(diaMes);
     //cremos los elementos
-    let fila = document.createElement('div');
-    fila.classList.add('fila');
-
-    celdas.append(fila);
     
-    for(i=0; i<7; i++) {
-        let dia = document.createElement('div');
-        dia.classList.add('dia');
-        //crear apartado fecha
-        let diaNum = document.createElement('h6');
-        diaNum.textContent=1;
-        let actividad = document.createElement('span');
-        actividad.classList.add('actividad');
-        actividad.textContent="futbol";
-        dia.append(diaNum);
-        dia.append(actividad);
-        fila.append(dia);
+    for(i=1; i<7; i++){
+        let fila = document.createElement('div');
+        fila.classList.add('fila');
+        for(j=0; j<7; j++) {
+            //generar las fechas
+            let calentDia = diaMes.getDate();
+            let calentMes = diaMes.getMonth();
+            let calentAnio= diaMes.getFullYear();
+            //crear una celda del calendario
+            let dia = document.createElement('div');
+            dia.classList.add('dia');
+            //crear apartado fecha
+            let diaNum = document.createElement('h6');
+            diaNum.textContent=calentDia;
+            let actividad = document.createElement('span');
+            actividad.classList.add('actividad');
+            actividad.textContent="futbol";
+            dia.append(diaNum);
+            dia.append(actividad);
+            fila.append(dia);
+            calentDia = calentDia+1;
+            diaMes.setDate(calentDia);
+        }
+        celdas.append(fila);
     }
+    // function crearDia(diaNum, actividad){
+        
 }
 console.log("hola esto es el final");

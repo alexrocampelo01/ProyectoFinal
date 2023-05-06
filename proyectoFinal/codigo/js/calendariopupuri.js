@@ -55,10 +55,10 @@ function escribirdias() {
          prsem--; //adaptar al calendario español (empezar por lunes)
          if (prsem==-1) {prsem=6;}
          //buscar fecha para primera celda:
-         diaprmes=primeromes.getDate() 
+         diaprmes=primeromes.getDate();
          prcelda=diaprmes-prsem; //restar días que sobran de la semana
          empezar=primeromes.setDate(prcelda) //empezar= tiempo UNIX 1ª celda
-         diames=new Date() //convertir en fecha
+         diames=new Date(); //convertir en fecha
          diames.setTime(empezar); //diames=fecha primera celda.
          //Recorrer las celdas para escribir el día:
          for (i=1;i<7;i++) { //localizar fila
