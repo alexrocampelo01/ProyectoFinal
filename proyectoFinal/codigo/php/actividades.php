@@ -1,8 +1,7 @@
 <?php
 require_once('conet.php');
 $con = new Conexion();
-
-    $sql = "SELECT * FROM usuario WHERE 1 ";
+$sql = "SELECT * FROM usuario WHERE 1 ";
 //======================================================================================================
 // metodo get
 //======================================================================================================
@@ -36,70 +35,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //print_r($usuario);
     //echo "algo";
     //variables para guardar los ussuarios
-    if(isset($usuario->tipoUser)){
-        //echo "entro en el login";
-        $tipo = $usuario->tipoUser;
-        $nom = $usuario->userLogin;
-        $pass = $usuario->passLogin;
-        try{
-            $sql = "SELECT * FROM `$tipo` WHERE nomUsu LIKE '$nom' AND pass LIKE '$pass';";
-        //echo $sql;  
-        $result = $con->query($sql);
-        $user = $result->fetch_all(MYSQLI_ASSOC);
-        header("HTTP/1.1 200 OK");
-        $user['tipoUser'] = $tipo;
-        echo json_encode($user);
-        }catch(mysqli_sql_exception $e){
-            echo $e;
-        }
-    }else if(isset($usuario->nomP)){
-        $nomUsu = $usuario->nomUsu;
-        $pass = $usuario->pass;
-        $nom = $usuario->nom;
-        $apel1 = $usuario->apel1;
-        $apel2 = $usuario->apel2;
-        $curso = $usuario->curso;
-        $nomP = $usuario->nomP;
-        $tlfP = $usuario->tlfP;
-        $nomM = $usuario->nomM;
-        $tlfM = $usuario->tlfM;
-        $dir = $usuario->dir;
-        $fechNac = $usuario->fechNac;
-        $observaciones = $usuario->observaciones;
-        try{
-            $sql = "INSERT INTO `socios` (`id_s`, `nomUsu`, `pass`, `nombre`, `apellido1`, `apellido2`, `curso`, `nomPadre`, `tlfPadre`, `nomMadre`, `tlfMadre`, `direccion`, `fechaNac`, `observaciones`)
-            VALUES (NULL, '$nomUsu', '$pass', '$nom', '$apel1'
-            , '$apel2', '$curso', '$nomP', '$tlfP', '$nomM'
-            , '$tlfM', '$dir', '$fechNac', '$observaciones');";
-        //echo $sql;  
-        $con->query($sql);
-        header("HTTP/1.1 200 OK");
-        echo json_encode($con->insert_id);
-        }catch(mysqli_sql_exception $e){
-            echo $e;
-        }
-    }else{
-        $nomUsu = $usuario->nomUsu;
-        $pass = $usuario->pass;
-        $nom = $usuario->nom;
-        $apel1 = $usuario->apel1;
-        $apel2 = $usuario->apel2; 
-        $curso = $usuario->curso;
-        $tlf = $usuario->tlf;
-        $tituloM = $usuario->tituloM;
-        $carneC = $usuario->carneC;
-        try{
-            $sql = "INSERT INTO `monitor` (`id_m`, `nomUsu`, `pass`, `nombre`, `apellido1`, `apellido2`, `tlf`, `curso`, `carne_conducir`, `titulo_monitor`)
-             VALUES (NULL, '$nomUsu', '$pass', '$nom',
-              '$apel1', '$apel2', '$curso ',
-               '$tlf ', '$tituloM', '$carneC');";
-            //echo $sql;  
-            $con->query($sql);
-            header("HTTP/1.1 200 OK");
-            echo json_encode($con->insert_id);
-        }catch(mysqli_sql_exception $e){
-            echo $e;
-        }
+    $creador_id = $usuario->nomUsu;
+    $fecha = $usuario->pass;
+    $lugar = $usuario->nom;
+    $curso = $usuario->apel1;
+    $titulo = $usuario->apel2;
+    $descripcion = $usuario->curso;
+    try{
+        $sql = "INSERT INTO `actividades` (`id_a`, `creador_id`, `fecha`, `lugar`, `curso`, `titulo`, `descripcion`)
+         VALUES (NULL, '1', '2023-05-16 10:18:42.000000', 'alguno',
+          '4epo', 'titulo', 'algo');";
+    //echo $sql;  
+    $con->query($sql);
+    header("HTTP/1.1 200 OK");
+    echo json_encode($con->insert_id);
+    }catch(mysqli_sql_exception $e){
+        echo $e;
     }
 }
 //======================================================================================================
