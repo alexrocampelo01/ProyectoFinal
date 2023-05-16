@@ -8,13 +8,15 @@ fetch('componetes/formActividad.html')
 let butCrear = document.querySelector('#butCrear');
 butCrear.addEventListener('click', crear);
 let actividad = {};
-function crear(){
-    actividad.fecha = document.querySelector('#fecha').ariaValueMax;
-    actividad.lugar = document.querySelector('#lugar').ariaValueMax;
-    actividad.curso = document.querySelector('#curso').ariaValueMax;
-    actividad.fecha = document.querySelector('#fecha').ariaValueMax;
-    actividad.titulo = document.querySelector('#titulo').ariaValueMax;
-    actividad.des = document.querySelector('#des').ariaValueMax;
+function crear() {
+    actividad.fecha = document.querySelector('#fecha').value;
+    actividad.lugar = document.querySelector('#lugar').value;
+    actividad.curso = document.querySelector('#curso').value;
+    actividad.fecha = document.querySelector('#fecha').value;
+    actividad.titulo = document.querySelector('#titulo').value;
+    actividad.des = document.querySelector('#des').value;
+    console.log(butCrear);
+    console.log(actividad);
     fetch("http://localhost/ProyectoFinal/proyectoFinal/codigo/php/actividades.php", {
             method:'POST',
             headers: {
@@ -22,7 +24,7 @@ function crear(){
                 },
             body: JSON.stringify(actividad),
     }).then(response => {
-        return response.text();
+        return response.json();
         // switch(response.status){
         //     case 200:
         //         return response.json();

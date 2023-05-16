@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     echo "esto es get";
     try {
         echo"hola";
-        $sql = "SELECT * FROM socios WHERE 1";
+        $sql = "SELECT * FROM actividades WHERE 1";
         $result = $con->query($sql);
         //comprovamos que alla resultado
         // if($result->num_rows == 0 ){
@@ -35,16 +35,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //print_r($usuario);
     //echo "algo";
     //variables para guardar los ussuarios
-    $creador_id = $usuario->nomUsu;
-    $fecha = $usuario->pass;
-    $lugar = $usuario->nom;
-    $curso = $usuario->apel1;
-    $titulo = $usuario->apel2;
-    $descripcion = $usuario->curso;
+    //$creador_id = $usuario->nomUsu;
+    $fecha = $usuario->fecha;
+    $lugar = $usuario->lugar;
+    $curso = $usuario->curso;
+    $titulo = $usuario->titulo;
+    $des = $usuario->des;
     try{
         $sql = "INSERT INTO `actividades` (`id_a`, `creador_id`, `fecha`, `lugar`, `curso`, `titulo`, `descripcion`)
-         VALUES (NULL, '1', '2023-05-16 10:18:42.000000', 'alguno',
-          '4epo', 'titulo', 'algo');";
+         VALUES (NULL, '1', '$fecha', '$lugar',
+          '$curso', '$titulo', '$des');";
     //echo $sql;  
     $con->query($sql);
     header("HTTP/1.1 200 OK");

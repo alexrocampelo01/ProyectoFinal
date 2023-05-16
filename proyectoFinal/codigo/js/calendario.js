@@ -38,12 +38,13 @@ function filaNombreDias(){ //funciona
         diaLetra.append(nombreDia);
         diasLetra.append(diaLetra);
     }
-    console.log(diasLetra);
-    console.log(celdas);
+    // console.log(diasLetra);
+    // console.log(celdas);
     celdas.append(diasLetra);
 }
 function primeraSemana(){
     let priDiaMes = new Date(anohoy,mesHoy,"1"); //primer dia de cada mes
+    let ultDiaMes = new Date(anohoy,mesHoy +1, 0); //primer dia de cada mes
     let priDiaLSemana = priDiaMes.getDay(); //cojemos el nuemro
     //console.log(diassemana[priDiaLSemana]);
     //controlamos el paso de lunes a domingo
@@ -54,10 +55,13 @@ function primeraSemana(){
     empezar = priDiaMes.setDate(fechCelda);
     console.log(empezar);
     diaMes = new Date();
-    diaMes.setTime(empezar);  
-    console.log(diaMes);
-    //cremos los elementos
+    //diaMes.setTime(empezar);  
+    console.log("debug==================");
+    console.log(priDiaMes);
+    console.log(ultDiaMes);
     
+    //cremos los elementos
+    obtenerActividadesMes(priDiaMes);
     for(i=1; i<7; i++){
         let fila = document.createElement('div');
         fila.classList.add('fila');
@@ -87,3 +91,7 @@ function primeraSemana(){
         
 }
 console.log("hola esto es el final");
+
+function obtenerActividadesMes(){
+    console.log("obtener actividades");
+}

@@ -82,7 +82,7 @@ function recogerDatos(){
     }
     
 }
-console.log("los datosd e los socios"+datosSocios.nom);
+//console.log("los datosd e los socios"+datosSocios.nom);
 function mandarForm(objeto){
     fetch("http://localhost/ProyectoFinal/proyectoFinal/codigo/php/login.php", {
             method:'POST',
