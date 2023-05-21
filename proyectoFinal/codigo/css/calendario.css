@@ -85,3 +85,38 @@ h1 {
 .diaL{
   margin: 1%;
 }
+/* calendario */
+header{
+  background-color: white;
+  height: fit-content;
+}
+#logo{
+  width: 10vw;
+  min-width: 30px;
+  margin: 2vh;
+}
+header i{
+  font-size: 6vw;
+  width: 10vw;
+  min-width: 30px;
+  margin: 2vh;
+
+  cursor: pointer;
+  position: relative;
+  float: right;
+  background-color: blue;
+}
+.escondido{
+  display: none;
+}
+nav {
+  background-color: goldenrod;
+}
+nav:hover {
+  color: white;
+  display: block;
+}
+i:hover + nav{
+  color: wheat;
+  display: block;
+}

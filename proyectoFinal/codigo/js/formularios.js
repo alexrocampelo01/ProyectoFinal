@@ -15,7 +15,7 @@ function cambiarForm(){
         .then((response) => response.text())
         .then( (formulario) =>{
             console.log("socio");
-            let form = document.querySelector('#formulario').innerHTML = formulario;
+            document.querySelector('#formulario').innerHTML = formulario;
             //cremos el boton de registro 
             // let butRegistro = document.createElement('span');
             // butRegistro.addEventListener('click', recogerDatos);
