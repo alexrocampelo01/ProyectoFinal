@@ -107,8 +107,8 @@ console.log("hola esto es el final");
 // }
 function obtenerActividadFecha(fecha, dia){
     //console.log(fecha);
-    //console.log(`url http://localhost/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`);
-    fetch(`http://localhost/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`)
+    //console.log(`http://192.168.56.114/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`);
+    fetch(`http://192.168.56.114/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`)
     .then(response => {
         switch (response.status){
             case 200:
@@ -126,7 +126,6 @@ function obtenerActividadFecha(fecha, dia){
             return "noData";
         }
     })
-    return "feo";
 }
 function crearActividad(actividad,dia){
     console.log(dia);
