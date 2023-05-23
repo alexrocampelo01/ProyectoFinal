@@ -13,7 +13,8 @@ let anohoy = hoy.getFullYear(); // año actual
 let celdas = document.querySelector('#celdas');
 cabeceraCalendario();
 filaNombreDias();
-primeraSemana();
+genararDiasCalendario();
+//crea la cabecera del calendarioS
 function cabeceraCalendario(){ //funciona
     document.querySelector('#titulo')
     .textContent = meses[mesHoy]+" de "+ anohoy; //mes en el titulo
@@ -25,9 +26,9 @@ function cabeceraCalendario(){ //funciona
     //lo aisnamos a los botones
     document.querySelector('#ant').textContent= meses[mesAnt];
     document.querySelector('#sig').textContent= meses[mesSig];
-    
 }
-function filaNombreDias(){ //funciona
+//genermos los nombres de los dias empezando por lunes 
+function filaNombreDias(){ //funcionaS
     let diasLetra = document.createElement('div')
     diasLetra.classList.add('filaDiasLetra');
     for(i=0; i<7; i++){
@@ -42,12 +43,11 @@ function filaNombreDias(){ //funciona
     // console.log(celdas);
     celdas.append(diasLetra);
 }
-function primeraSemana(){
+function genararDiasCalendario(){
     let priDiaMes = new Date(anohoy,mesHoy,"1"); //primer dia de cada mes
     let ultDiaMes = new Date(anohoy,mesHoy +1, 0); //primer dia de cada mes
     let priDiaLSemana = priDiaMes.getDay(); //cojemos el nuemro
-    //console.log(diassemana[priDiaLSemana]);
-    //controlamos el paso de lunes a domingo
+
     if (priDiaLSemana==-1) {priDiaLSemana=6;}
     //buscamos numero primer dia
     let priDiaNMes = priDiaMes.getDate();
@@ -55,20 +55,13 @@ function primeraSemana(){
     empezar = priDiaMes.setDate(fechCelda);
     //console.log(empezar);
     diaMes = new Date();
-    //diaMes.setTime(empezar);  
-    
-    //cremos los elementos
-    //console.log(priDiaMes);
-    //console.log(ultDiaMes);
-    //let activiadesMes = obtenerActividadesMes(priDiaMes ,ultDiaMes);
-    //console.log(activiadesMes);
     for(i=1; i<7; i++){
         let fila = document.createElement('div');
         fila.classList.add('fila');
         for(j=0; j<7; j++) {
             //generar las fechas
             let calentDia = diaMes.getDate();
-            ultDiaMes = diaMes;
+            //ultDiaMes = diaMes;
             //crear una celda del calendario
             let dia = document.createElement('div');
             dia.classList.add('dia');
@@ -76,8 +69,7 @@ function primeraSemana(){
             let diaNum = document.createElement('h6');
             diaNum.textContent=calentDia;
             //recijemos las actividades
-            let actividadHoy = {};
-            console.log(obtenerActividadFecha(diaMes, dia));
+            obtenerActividadFecha(diaMes, dia); //generamos la actividad
             //creamos actividad
             dia.append(diaNum);
             fila.append(dia);
@@ -87,9 +79,6 @@ function primeraSemana(){
         celdas.append(fila);
     }
     console.log("debug==================");
-    // console.log(priDiaMes);
-    // console.log(ultDiaMes);
-    // function crearDia(diaNum, actividad){
         
 }
 console.log("hola esto es el final");
@@ -126,7 +115,6 @@ function obtenerActividadFecha(fecha, dia){
             return "noData";
         }
     })
-    return "feo";
 }
 function crearActividad(actividad,dia){
     console.log(dia);
