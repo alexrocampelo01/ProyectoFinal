@@ -20,5 +20,4 @@ function abrirMenu(e){
         console.log('salgo del escondite');
         nav.classList.add('escondido');
     }
-    
 }
