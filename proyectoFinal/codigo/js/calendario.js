@@ -108,7 +108,8 @@ console.log("hola esto es el final");
 function obtenerActividadFecha(fecha, dia){
     //console.log(fecha);
     //console.log(`http://192.168.56.114/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`);
-    fetch(`http://192.168.56.114/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`)
+    fetch(`http://localhost/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`)
+    //fetch(`http://192.168.56.114/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`)
     .then(response => {
         switch (response.status){
             case 200:
@@ -132,11 +133,10 @@ function crearActividad(actividad,dia){
     console.log(actividad);
     let actividadSpan = document.createElement('span');
     actividadSpan.classList.add('actividad');
+    actividadSpan.dataset.id_acti = actividad[0].id_a;
     console.log(actividad[0].titulo);
     actividadSpan.textContent=actividad[0].titulo;
     dia.append(actividadSpan);
-    
-
 }
 function formatearFechaSql(fecha){
     //console.log(fecha);

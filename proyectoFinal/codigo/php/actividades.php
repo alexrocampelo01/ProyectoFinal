@@ -17,11 +17,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         } else if (isset($_GET['fechaBus'])) {
             $fecha = $_GET['fechaBus'];
             $sql = "SELECT * FROM `actividades` WHERE 1 AND fecha >= '$fecha 00:00:00' AND fecha <= '$fecha 23:59:59'; ";
+        } else if (isset($_GET['id_a'])){
+            $id_act = $_GET['idA'];
+            $sql = "SELECT * FROM `actividades` WHERE 1 and id_a='$id_act';";
         }
         $result = $con->query($sql);
         if ($result->num_rows != 0) {
             $actividades = $result->fetch_all(MYSQLI_ASSOC);
-            //print_r($sql);
+            print_r($sql);
             echo json_encode($actividades);
         }else{
             header("HTTP/1.1 204 No Content");
