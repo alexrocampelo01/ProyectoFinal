@@ -10,7 +10,7 @@ function logear(){
     mandarForm(logUsu);
 }
 function mandarForm(usu){
-    console.log(usu);
+    //console.log(usu);
     fetch("http://localhost/ProyectoFinal/proyectoFinal/codigo/php/login.php", {
             method:'POST',
             headers: {
@@ -21,11 +21,20 @@ function mandarForm(usu){
         return response.json();
     }).then(data => {
         console.log(data);
-        if(data){
-            let nomUser = data[0].nomUsu;
-            console.log(data.tipoUser);
-            localStorage.setItem('nomUser',nomUser);
-            localStorage.setItem('tipoUser',data[0].tipoUser);
+        console.log(document.querySelector('#tipoUser').value);
+        if(data.tipoUser == document.querySelector('#tipoUser').value){
+            if(data[0]){
+                console.log(data.tipoUser); 
+                localStorage.setItem('nomUser',data[0].nomUsu);
+                localStorage.setItem('tipoUser', data.tipoUser);
+                window.location.href="http://localhost/ProyectoFinal/proyectoFinal/codigo/html/calendario.html";
+            }else{
+                document.querySelector('#logError').innerHTML = "error al encontrar usario o contraseña";
+
+            }
+            
+        }else{
+            document.querySelector('#logError').innerHTML = "error al encontrar usario o contraseña";
         }
     })
 }

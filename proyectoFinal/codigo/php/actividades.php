@@ -10,21 +10,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     try {
         //echo"hola";
         $sql = "SELECT * FROM actividades WHERE 1";
-        if (isset($_GET['fechaIni']) && isset($_GET['fechaFin'])) {
-            $fechaInicio = $_GET['fechaIni'];
-            $fechaFinal = $_GET['fechaFin'];
-            $sql = "SELECT * FROM `actividades` WHERE 1 and fecha >= '$fechaInicio' AND fecha <= '$fechaFinal';";
+        if (isset($_GET['idAct'])) {
+            $id_act = $_GET['idAct'];
+            $sql = "SELECT * FROM `actividades` WHERE 1 and id_a='$id_act';";
         } else if (isset($_GET['fechaBus'])) {
             $fecha = $_GET['fechaBus'];
             $sql = "SELECT * FROM `actividades` WHERE 1 AND fecha >= '$fecha 00:00:00' AND fecha <= '$fecha 23:59:59'; ";
-        } else if (isset($_GET['id_a'])){
-            $id_act = $_GET['idA'];
-            $sql = "SELECT * FROM `actividades` WHERE 1 and id_a='$id_act';";
+        } else if (isset($_GET['fechaIni']) && isset($_GET['fechaFin'])){
+            $fechaInicio = $_GET['fechaIni'];
+            $fechaFinal = $_GET['fechaFin'];
+            $sql = "SELECT * FROM `actividades` WHERE 1 and fecha >= '$fechaInicio' AND fecha <= '$fechaFinal';";
         }
         $result = $con->query($sql);
         if ($result->num_rows != 0) {
             $actividades = $result->fetch_all(MYSQLI_ASSOC);
-            print_r($sql);
+            //print_r($sql);
             echo json_encode($actividades);
         }else{
             header("HTTP/1.1 204 No Content");
