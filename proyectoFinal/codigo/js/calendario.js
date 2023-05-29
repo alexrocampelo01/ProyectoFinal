@@ -32,7 +32,7 @@ let divInformacion = document.querySelector('#informacion');
 //crea la cabecera del calendarioS
 function cabeceraCalendario(){ //funciona
     document.querySelector('#titulo')
-    .textContent = meses[mescal]+" de "+ anocal; //mes en el titulo
+    .textContent = meses[mescal]+" de " + anocal; //mes en el titulo
     let mesAnt = mescal -1; //mes anterio
     let mesSig = mescal +1; //mes siguiente
     //si me paso de enero a diciembre y al contrario

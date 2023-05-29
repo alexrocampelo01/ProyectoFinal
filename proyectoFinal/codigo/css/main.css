@@ -5,41 +5,6 @@
 body{
     background-color: white;
 }
-header{
-    background-color: white;
-    height: fit-content;
-}
-#logo{
-    width: 10vw;
-    min-width: 30px;
-    margin: 2vh;
-}
-header i{
-    font-size: 6vw;
-    width: 10vw;
-    min-width: 30px;
-    margin: 2vh;
-
-    cursor: pointer;
-    position: relative;
-    float: right;
-    background-color: blue;
-}
-.escondido{
-    display: none;
-}
-nav {
-    background-color: goldenrod;
-}
-nav:hover {
-    color: white;
-    display: block;
-}
-i:hover + nav{
-    color: wheat;
-    display: block;
-}
-/* fin header */
 #fotoEntrada{
     background-image: url('../img/Dia_Trineos.jpg');
     height: 100vh;
@@ -59,7 +24,7 @@ i:hover + nav{
     text-align: center;
 }
 .seccionExplicativa{
-    background-color: wheat;
+    /* background-color: wheat; */
     width: 30%;
     float: left;
     text-align: center;
@@ -73,7 +38,7 @@ i:hover + nav{
 }
 .seccionExplicativa .icono img{
     width: 6vw;
-    /* border-radius: 8vw; */
+    border-radius: 4vw;
     margin: 1vh;
     padding: 1vh;
     min-width: 30px;

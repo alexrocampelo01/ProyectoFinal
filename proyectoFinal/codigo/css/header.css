@@ -1,0 +1,43 @@
+header{
+    background-color: white;
+    height: fit-content;
+}
+#logo{
+    width: 10vw;
+    min-width: 30px;
+    margin: 2vh;
+}
+header i{
+    font-size: 6vw;
+    width: 10vw;
+    min-width: 30px;
+    margin: 2vh;
+
+    cursor: pointer;
+    position: relative;
+    float: right;
+}
+.escondido{
+    display: none;
+}
+nav {
+    background-color: lightgreen;
+    border-radius: 25vw;
+    margin: 2%;
+}
+nav:hover {
+    color: white;
+    display: block;
+}
+i:hover + nav{
+    color: wheat;
+    display: block;
+}
+li{
+    list-style: none;
+}
+li a{
+    color: black;
+    text-decoration: none;
+}
+/* fin header */
