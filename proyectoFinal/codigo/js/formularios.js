@@ -84,7 +84,8 @@ function recogerDatos(){
 }
 //console.log("los datosd e los socios"+datosSocios.nom);
 function mandarForm(objeto){
-    fetch("http://localhost/ProyectoFinal/proyectoFinal/codigo/php/login.php", {
+    // fetch("http://localhost/ProyectoFinal/proyectoFinal/codigo/php/login.php", {
+    fetch("http://192.168.56.114/ProyectoFinal/proyectoFinal/codigo/php/login.php", {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'

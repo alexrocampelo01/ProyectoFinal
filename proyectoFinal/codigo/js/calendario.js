@@ -20,7 +20,8 @@ function userRegistrado(){
     if(localStorage.tipoUser){
         console.log("autorizado");
     }else{
-        window.location.href = "http://localhost/ProyectoFinal/proyectoFinal/codigo/html/login.html";
+        //window.location.href = "http://localhost/ProyectoFinal/proyectoFinal/codigo/html/login.html";
+        window.location.href = "http://192.168.56.114/ProyectoFinal/proyectoFinal/codigo/html/login.html";
     }
 }
 cabeceraCalendario();
@@ -118,8 +119,8 @@ console.log("hola esto es el final");
 function obtenerActividadFecha(fecha, dia){
     //console.log(fecha);
     //console.log(`http://192.168.56.114/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`);
-    fetch(`http://localhost/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`)
-    //fetch(`http://192.168.56.114/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`)
+    //fetch(`http://localhost/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`)
+    fetch(`http://192.168.56.114/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`)
     .then(response => {
         switch (response.status){
             case 200:
@@ -163,8 +164,8 @@ function crearInfo(e){
     console.log(e.target.dataset.id_acti);
     idAct = e.target.dataset.id_acti; 
     //console.log(idAct);
-    fetch(`http://localhost/proyectoFinal/proyectoFinal/codigo/php/actividades.php?idAct=${idAct}`)
-    //fetch(`http://192.168.56.114/proyectoFinal/proyectoFinal/codigo/php/actividades.php?fechaBus=${formatearFechaSql(fecha)}`)
+    //fetch(`http://localhost/proyectoFinal/proyectoFinal/codigo/php/actividades.php?idAct=${idAct}`)
+    fetch(`http://192.168.56.114/ProyectoFinal/proyectoFinal/codigo/php/actividades.php?idAct=${idAct}`)
     .then(response => {
         switch (response.status){
             case 200:

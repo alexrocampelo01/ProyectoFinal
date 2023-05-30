@@ -17,7 +17,8 @@ function crear() {
     actividad.des = document.querySelector('#des').value;
     console.log(butCrear);
     console.log(actividad);
-    fetch("http://localhost/ProyectoFinal/proyectoFinal/codigo/php/actividades.php", {
+    // fetch("http://localhost/ProyectoFinal/proyectoFinal/codigo/php/actividades.php", {
+    fetch("http://192.168.56.114/ProyectoFinal/proyectoFinal/codigo/php/actividades.php", {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'

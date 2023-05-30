@@ -11,7 +11,8 @@ function logear(){
 }
 function mandarForm(usu){
     //console.log(usu);
-    fetch("http://localhost/ProyectoFinal/proyectoFinal/codigo/php/login.php", {
+    // fetch("http://localhost/ProyectoFinal/proyectoFinal/codigo/php/login.php", {
+    fetch("http://192.168.56.114/ProyectoFinal/proyectoFinal/codigo/php/login.php", {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
@@ -27,7 +28,7 @@ function mandarForm(usu){
                 console.log(data.tipoUser); 
                 localStorage.setItem('nomUser',data[0].nomUsu);
                 localStorage.setItem('tipoUser', data.tipoUser);
-                window.location.href="http://localhost/ProyectoFinal/proyectoFinal/codigo/html/calendario.html";
+                window.location.href="http://192.168.56.114/ProyectoFinal/proyectoFinal/codigo/html/calendario.html";
             }else{
                 document.querySelector('#logError').innerHTML = "error al encontrar usario o contraseña";
 
