@@ -1,4 +1,10 @@
 <?php
+require_once('../../vendor/autoload.php');
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+$key = 'ejemplo';
+$jwt = "";
+$payLoad = "";
 require_once('conet.php');
 $con = new Conexion();
 
