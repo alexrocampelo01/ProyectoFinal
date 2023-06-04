@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
-<<<<<<< HEAD
 -- Tiempo de generación: 04-06-2023 a las 17:06:47
-=======
--- Tiempo de generación: 30-05-2023 a las 20:54:37
->>>>>>> daa7e81b6538a4d52a266934242010168b95ef7e
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -24,11 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `myclub`
 --
-<<<<<<< HEAD
 CREATE DATABASE IF NOT EXISTS `myclub` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `myclub`;
-=======
->>>>>>> daa7e81b6538a4d52a266934242010168b95ef7e
 
 -- --------------------------------------------------------
 
@@ -58,12 +51,8 @@ INSERT INTO `actividades` (`id_a`, `creador_id`, `fecha`, `lugar`, `curso`, `tit
 (20, 1, '2023-05-20 10:00:00', 'gradefes', '2eso', 'multideporte', 'leon'),
 (21, 1, '2023-05-01 10:00:00', 'leon', '4epo', 'musica', 'tocamos guitarra'),
 (22, 1, '2023-05-02 12:00:00', 'leon', '4epo', 'juegos', 'búsqueda del tesoro'),
-<<<<<<< HEAD
 (23, 1, '2023-05-03 10:00:00', 'leon', '4epo', 'padel', 'algo'),
 (24, 1, '2023-05-04 16:00:00', 'leon', '6epo', 'programación', 'se realizara un curso de scrach');
-=======
-(23, 1, '2023-05-03 10:00:00', 'leon', '4epo', 'padel', 'algo');
->>>>>>> daa7e81b6538a4d52a266934242010168b95ef7e
 
 -- --------------------------------------------------------
 
@@ -200,11 +189,7 @@ ALTER TABLE `socios`
 -- AUTO_INCREMENT de la tabla `actividades`
 --
 ALTER TABLE `actividades`
-<<<<<<< HEAD
   MODIFY `id_a` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-=======
-  MODIFY `id_a` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
->>>>>>> daa7e81b6538a4d52a266934242010168b95ef7e
 
 --
 -- AUTO_INCREMENT de la tabla `admins`
