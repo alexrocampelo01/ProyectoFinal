@@ -26,9 +26,9 @@ function abrirMenu(e){
 
 function cerrarSesion(e){
     console.log(e.target);
-    if(localStorage.getItem('tipoUser')){
-        console.log("hola" +localStorage.getItem('tipoUser'));
-        localStorage.removeItem('tipoUser');
+    if(localStorage.getItem('jwt')){
+        //console.log("hola" +localStorage.getItem('tipoUser'));
+        localStorage.removeItem('jwt');
         document.querySelector('#butCerrar').innerHTML = `<a href="../html/calendario.html">acabar sesion</a>`;
 
     }else{

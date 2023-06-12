@@ -27,6 +27,7 @@ function mandarForm(usu){
                 console.log(data.tipoUser); 
                 localStorage.setItem('nomUser',data[0].nomUsu);
                 localStorage.setItem('tipoUser', data.tipoUser);
+                localStorage.setItem('jwt', data.jwt);
                 window.location.href="http://localhost/ProyectoFinal/proyectoFinal/codigo/html/calendario.html";
             }else{
                 document.querySelector('#logError').innerHTML = "error al encontrar usario o contraseña";

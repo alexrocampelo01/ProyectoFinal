@@ -17,7 +17,7 @@ userRegistrado();
 //comprobamos que el usario se alla registrado
 function userRegistrado(){
     console.log(localStorage.tipoUser);
-    if(localStorage.tipoUser){
+    if(localStorage.jwt){
         console.log("autorizado");
     }else{
         window.location.href = "http://localhost/ProyectoFinal/proyectoFinal/codigo/html/login.html";

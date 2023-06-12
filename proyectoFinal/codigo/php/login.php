@@ -13,9 +13,9 @@ $con = new Conexion();
 // metodo get
 //======================================================================================================
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    echo "esto es get";
+    //echo "esto es get";
     try {
-        echo"hola";
+        //echo"hola";
         $sql = "SELECT * FROM socios WHERE 1";
         $result = $con->query($sql);
         //comprovamos que alla resultado
@@ -52,8 +52,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         //echo $sql;  
         $result = $con->query($sql);
         $user = $result->fetch_all(MYSQLI_ASSOC);
+        //print_r($user);
+        //lanzamos el web token 
+        $payLoad = [
+            'nombreUsu' => $user[0]['nomUsu'],
+            'tipo' => $tipo
+        ];
+        $jwt = JWT::encode($payLoad, $key, 'HS256');
         header("HTTP/1.1 200 OK");
-        $user['tipoUser'] = $tipo;
+        $user['jwt'] = $jwt;
         echo json_encode($user);
         }catch(mysqli_sql_exception $e){
             echo $e;
@@ -131,3 +138,5 @@ else{
 // INSERT INTO `monitor` (`id_m`, `nomUsu`, `pass`, `nombre`, `apellido1`, `apellido2`, `tlf`, `curso`, `carne_conducir`, `titulo_monitor`) VALUES (NULL, 'alex', 'alex', 'alejandro', 'rodriguez', 'campelo', '658470620', '4epo', '1', '0');
 
 ?>
+
+
