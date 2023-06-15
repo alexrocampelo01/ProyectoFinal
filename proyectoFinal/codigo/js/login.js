@@ -11,7 +11,8 @@ function logear(){
 }
 function mandarForm(usu){
     //console.log(usu);
-    fetch("http://localhost/ProyectoFinal/proyectoFinal/codigo/php/login.php", {
+    fetch(urlLoginApi, {
+
             method:'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
@@ -20,22 +21,22 @@ function mandarForm(usu){
     }).then(response => {
         return response.json();
     }).then(data => {
-        console.log(data);
+        console.log(data[0]);
         console.log(document.querySelector('#tipoUser').value);
-        if(data.tipoUser == document.querySelector('#tipoUser').value){
+        if(data.jwt){
             if(data[0]){
                 console.log(data.tipoUser); 
                 localStorage.setItem('nomUser',data[0].nomUsu);
                 localStorage.setItem('tipoUser', data.tipoUser);
                 localStorage.setItem('jwt', data.jwt);
-                window.location.href="http://localhost/ProyectoFinal/proyectoFinal/codigo/html/calendario.html";
+                window.location.href= urlcalendarioHtml;
             }else{
                 document.querySelector('#logError').innerHTML = "error al encontrar usario o contraseña";
 
             }
             
         }else{
-            document.querySelector('#logError').innerHTML = "error al encontrar usario o contraseña";
+            document.querySelector('#logError').innerHTML = "error al encontrar usario o contraseñaaaaa";
         }
     })
 }
