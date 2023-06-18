@@ -8,6 +8,7 @@ function logear(){
     logUsu.userLogin = document.querySelector('#userLogin').value;
     logUsu.passLogin = document.querySelector('#passLogin').value;
     mandarForm(logUsu);
+    console.log(logUsu);
 }
 
 function mandarForm(usu){
