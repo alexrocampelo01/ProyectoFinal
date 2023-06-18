@@ -3,16 +3,16 @@ butLogin.addEventListener('click', logear);
 
 let logUsu = {};
 function logear(){
-    console.log(butLogin);
+    //console.log(butLogin);
     logUsu.tipoUser = document.querySelector('#tipoUser').value;
     logUsu.userLogin = document.querySelector('#userLogin').value;
     logUsu.passLogin = document.querySelector('#passLogin').value;
     mandarForm(logUsu);
 }
-function mandarForm(usu){
-    console.log(usu);
-    fetch(urlLoginApi, {
 
+function mandarForm(usu){
+    console.log(SON.stringify(usu));
+    fetch(urlLoginApi, {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
