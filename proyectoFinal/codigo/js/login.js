@@ -12,7 +12,7 @@ function logear(){
 }
 
 function mandarForm(usu){
-    console.log(SON.stringify(usu));
+    console.log(JSON.stringify(usu));
     fetch(urlLoginApi, {
             method:'POST',
             headers: {
