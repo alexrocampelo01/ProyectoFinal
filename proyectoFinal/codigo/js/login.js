@@ -10,7 +10,7 @@ function logear(){
     mandarForm(logUsu);
     console.log(logUsu);
 }
-
+//=================================================================================
 function mandarForm(usu){
     console.log(JSON.stringify(usu));
     fetch(urlLoginApi, {
