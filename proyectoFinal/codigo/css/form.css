@@ -19,4 +19,6 @@ form{
 #butCrear{
     margin: 25%;
     background-color: lightblue;
+    text-align: center;
+    align-items: center;
 }

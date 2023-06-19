@@ -35,9 +35,10 @@ function crear() {
     .then(data => {
         if(data){
             console.log(data);
-            window.location.href = urlcalendarioHtml;
+            window.location.href= urlcalendarioHtml;
         }else{
             console.log("no hay datos");
+            document.querySelector('#logError').textContent= "error";
         }
     })
 }
