@@ -16,3 +16,7 @@ form{
     display: flex;
     flex-direction: column;
 }
+#butCrear{
+    margin: 25%;
+    background-color: lightblue;
+}
