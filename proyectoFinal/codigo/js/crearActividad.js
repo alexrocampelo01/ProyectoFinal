@@ -35,6 +35,7 @@ function crear() {
     .then(data => {
         if(data){
             console.log(data);
+            window.location.href = urlcalendarioHtml;
         }else{
             console.log("no hay datos");
         }
