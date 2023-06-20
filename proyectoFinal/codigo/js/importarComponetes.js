@@ -25,6 +25,8 @@ function abrirMenu(e){
 }
 
 function cerrarSesion(){
+    let butSesion = document.querySelector('#butCerrar');
+    console.log(butSesion);
     if(localStorage.getItem('jwt')){
         //console.log("hola" +localStorage.getItem('tipoUser'));
         localStorage.removeItem('jwt');
