@@ -1,6 +1,6 @@
 let cabecera = document.getElementsByTagName('header');
 console.log(cabecera);
-
+cerrarSesion();
 fetch('../html/componetes/header.html')
 .then( response => response.text())
 .then (html => {
