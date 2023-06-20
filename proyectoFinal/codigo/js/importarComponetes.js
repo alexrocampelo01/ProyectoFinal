@@ -8,8 +8,7 @@ fetch('../html/componetes/header.html')
     cabecera[0].innerHTML = html;
     let iconoMenu = document.querySelector("#menuNav");
     iconoMenu.addEventListener('click',abrirMenu);
-    let divSesion = document.querySelector('#divSesion');
-    divSesion.addEventListener('click', cerrarSesion);
+    
 })
 
 function abrirMenu(e){
@@ -26,6 +25,7 @@ function abrirMenu(e){
 
 function cerrarSesion(){
     let butSesion = document.querySelector('#butCerrar');
+    butSesion.addEventListener('click', cerrarSesion);
     console.log(butSesion);
     if(localStorage.getItem('jwt')){
         //console.log("hola" +localStorage.getItem('tipoUser'));
