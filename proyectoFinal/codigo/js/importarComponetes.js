@@ -24,8 +24,7 @@ function abrirMenu(e){
     }
 }
 
-function cerrarSesion(e){
-    console.log(e.target);
+function cerrarSesion(){
     if(localStorage.getItem('jwt')){
         //console.log("hola" +localStorage.getItem('tipoUser'));
         localStorage.removeItem('jwt');
