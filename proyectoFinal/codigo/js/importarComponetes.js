@@ -8,8 +8,8 @@ fetch('../html/componetes/header.html')
     cabecera[0].innerHTML = html;
     let iconoMenu = document.querySelector("#menuNav");
     iconoMenu.addEventListener('click',abrirMenu);
-    let butCerrarSesion = document.querySelector('#butCerrar');
-    butCerrarSesion.addEventListener('click', cerrarSesion);
+    let divSesion = document.querySelector('#divSesion');
+    divSesion.addEventListener('click', cerrarSesion);
 })
 
 function abrirMenu(e){
@@ -31,6 +31,7 @@ function cerrarSesion(e){
         localStorage.removeItem('jwt');
         document.querySelector('#butCerrar').textContent = "Cerrar SESION";
         window.location.href= urlMain;
+        
     }else{
         document.querySelector('#butCerrar').textContent = "Iniciar SESION";
         window.location.href= urlLoginHtml;
