@@ -10,13 +10,6 @@ fetch('../html/componetes/header.html')
     iconoMenu.addEventListener('click',abrirMenu);
     let butCerrarSesion = document.querySelector('#butCerrar');
     butCerrarSesion.addEventListener('click', cerrarSesion);
-    if(localStorage.getItem('jwt')){
-        butCerrarSesion.textContent = "Cerrar Sesion";
-        console.log("hay jwt");
-    }else{
-        butCerrarSesion.textContent = "Iniciar Sesion";
-        console.log("No hay jwt");
-    }
 })
 
 function abrirMenu(e){
@@ -36,9 +29,10 @@ function cerrarSesion(e){
     if(localStorage.getItem('jwt')){
         //console.log("hola" +localStorage.getItem('tipoUser'));
         localStorage.removeItem('jwt');
-        document.querySelector('#butCerrar').innerHTML = `<a href="../html/calendario.html">acabar sesion</a>`;
-
+        document.querySelector('#butCerrar').textContent = "Cerrar SESION";
+        window.location.href= urlMain;
     }else{
-        document.querySelector('#butCerrar').innerHTML = `<a href="../html/login.html">iniciar sesion</a>`;
+        document.querySelector('#butCerrar').textContent = "Iniciar SESION";
+        window.location.href= urlLoginHtml;
     }
 }
