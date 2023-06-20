@@ -10,6 +10,13 @@ fetch('../html/componetes/header.html')
     iconoMenu.addEventListener('click',abrirMenu);
     let butCerrarSesion = document.querySelector('#butCerrar');
     butCerrarSesion.addEventListener('click', cerrarSesion);
+    if(localStorage.getItem('jwt')){
+        butCerrarSesion.textContent = "Cerrar Sesion";
+        console.log("hay jwt");
+    }else{
+        butCerrarSesion.textContent = "Iniciar Sesion";
+        console.log("No hay jwt");
+    }
 })
 
 function abrirMenu(e){
