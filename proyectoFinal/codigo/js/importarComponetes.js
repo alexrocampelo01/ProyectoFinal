@@ -8,7 +8,6 @@ fetch('../html/componetes/header.html')
     cabecera[0].innerHTML = html;
     let iconoMenu = document.querySelector("#menuNav");
     iconoMenu.addEventListener('click',abrirMenu);
-    
 })
 
 function abrirMenu(e){
