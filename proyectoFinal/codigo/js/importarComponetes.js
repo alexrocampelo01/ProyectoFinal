@@ -9,7 +9,11 @@ fetch('../html/componetes/header.html')
     iconoMenu.addEventListener('click',abrirMenu);
     let butSesion = document.querySelector('#butCerrar');
     butSesion.addEventListener('click', cerrarSesion);
-    butSesion.textContent="Iniciar Sesion";
+    if(localStorage.getItem('jwt')){
+        butSesion.textContent="Cerrar Sesion";
+    }else{
+        butSesion.textContent="Iniciar Sesion";
+    }
     console.log(butSesion);
 })
 function abrirMenu(e){
