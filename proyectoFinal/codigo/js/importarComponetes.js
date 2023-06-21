@@ -7,6 +7,8 @@ fetch('../html/componetes/header.html')
     cabecera[0].innerHTML = html;
     let iconoMenu = document.querySelector("#menuNav");
     iconoMenu.addEventListener('click',abrirMenu);
+    let butSesion = document.querySelector('#butCerrar');
+    butSesion.addEventListener('click', cerrarSesion);
 })
 cerrarSesion();
 function abrirMenu(e){
@@ -22,9 +24,7 @@ function abrirMenu(e){
 }
 
 function cerrarSesion(e){
-    let butSesion = document.querySelector('#butCerrar');
-    butSesion.addEventListener('click', cerrarSesion);
-    console.log(butSesion);
+    console.log(e.target);
     if(localStorage.getItem('jwt')){
         //console.log("hola" +localStorage.getItem('tipoUser'));
         localStorage.removeItem('jwt');
