@@ -9,6 +9,7 @@ fetch('../html/componetes/header.html')
     iconoMenu.addEventListener('click',abrirMenu);
     let butSesion = document.querySelector('#butCerrar');
     butSesion.addEventListener('click', cerrarSesion);
+    butSesion.textContent="Iniciar Sesion";
     console.log(butSesion);
 })
 function abrirMenu(e){
