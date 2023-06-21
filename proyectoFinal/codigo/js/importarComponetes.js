@@ -24,13 +24,13 @@ function abrirMenu(e){
     }
 }
 
-function cerrarSesion(){
+function cerrarSesion(e){
     console.log("pulsado cierro");
     if(localStorage.getItem('jwt')){
         //console.log("hola" +localStorage.getItem('tipoUser'));
         localStorage.removeItem('jwt');
-        document.querySelector('#butCerrar').textContent = "Cerrar SESION";        
+        e.target.textContent = "Cerrar SESION";        
     }else{
-        document.querySelector('#butCerrar').textContent = "Iniciar SESION";
+        e.target.textContent = "Iniciar SESION";
     }
 }
