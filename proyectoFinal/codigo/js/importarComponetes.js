@@ -11,7 +11,6 @@ fetch('../html/componetes/header.html')
     butSesion.addEventListener('click', cerrarSesion);
     console.log(butSesion);
 })
-cerrarSesion();
 function abrirMenu(e){
     console.log(e.target);
     let nav = document.querySelector("#navegacion");
