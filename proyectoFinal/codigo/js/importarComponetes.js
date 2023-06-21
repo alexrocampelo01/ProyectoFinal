@@ -24,8 +24,8 @@ function abrirMenu(e){
 
 function cerrarSesion(){
     let butSesion = document.querySelector('#butCerrar');
-    butSesion.addEventListener('click', cerrarSesion);
     console.log(butSesion);
+    butSesion.addEventListener('click', cerrarSesion);
     if(localStorage.getItem('jwt')){
         //console.log("hola" +localStorage.getItem('tipoUser'));
         localStorage.removeItem('jwt');
