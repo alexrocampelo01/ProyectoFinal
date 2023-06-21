@@ -1,6 +1,5 @@
 let cabecera = document.getElementsByTagName('header');
 console.log(cabecera);
-cerrarSesion();
 fetch('../html/componetes/header.html')
 .then( response => response.text())
 .then (html => {
@@ -9,7 +8,7 @@ fetch('../html/componetes/header.html')
     let iconoMenu = document.querySelector("#menuNav");
     iconoMenu.addEventListener('click',abrirMenu);
 })
-
+cerrarSesion();
 function abrirMenu(e){
     console.log(e.target);
     let nav = document.querySelector("#navegacion");
@@ -22,18 +21,24 @@ function abrirMenu(e){
     }
 }
 
-function cerrarSesion(){
+function cerrarSesion(e){
     let butSesion = document.querySelector('#butCerrar');
-    console.log(butSesion);
     butSesion.addEventListener('click', cerrarSesion);
+    console.log(butSesion);
     if(localStorage.getItem('jwt')){
         //console.log("hola" +localStorage.getItem('tipoUser'));
         localStorage.removeItem('jwt');
         document.querySelector('#butCerrar').textContent = "Cerrar SESION";
-        window.location.href= urlMain;
+        if(e){
+            window.location.href= urlMain;
+        }
+        
         
     }else{
         document.querySelector('#butCerrar').textContent = "Iniciar SESION";
-        window.location.href= urlLoginHtml;
+        if(e){
+
+            window.location.href= urlLoginHtml;
+        }
     }
 }
