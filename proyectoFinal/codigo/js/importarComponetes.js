@@ -8,11 +8,12 @@ fetch('../html/componetes/header.html')
     let iconoMenu = document.querySelector("#menuNav");
     iconoMenu.addEventListener('click',abrirMenu);
     let butSesion = document.querySelector('#butCerrar');
+    console.log(butSesion);
     butSesion.addEventListener('click', cerrarSesion);
 })
 cerrarSesion();
-function abrirMenu(e){
-    console.log(e.target);
+function abrirMenu(){
+    console.log("pulsado");
     let nav = document.querySelector("#navegacion");
     if(nav.classList.contains('escondido')){
         console.log('me escondo');
