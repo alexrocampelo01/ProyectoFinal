@@ -8,12 +8,12 @@ fetch('../html/componetes/header.html')
     let iconoMenu = document.querySelector("#menuNav");
     iconoMenu.addEventListener('click',abrirMenu);
     let butSesion = document.querySelector('#butCerrar');
-    console.log(butSesion);
     butSesion.addEventListener('click', cerrarSesion);
+    console.log(butSesion);
 })
 cerrarSesion();
-function abrirMenu(){
-    console.log("pulsado");
+function abrirMenu(e){
+    console.log(e.target);
     let nav = document.querySelector("#navegacion");
     if(nav.classList.contains('escondido')){
         console.log('me escondo');
@@ -24,22 +24,13 @@ function abrirMenu(){
     }
 }
 
-function cerrarSesion(e){
-    console.log(e.target);
+function cerrarSesion(){
+    console.log("pulsado cierro");
     if(localStorage.getItem('jwt')){
         //console.log("hola" +localStorage.getItem('tipoUser'));
         localStorage.removeItem('jwt');
-        document.querySelector('#butCerrar').textContent = "Cerrar SESION";
-        if(e){
-            window.location.href= urlMain;
-        }
-        
-        
+        document.querySelector('#butCerrar').textContent = "Cerrar SESION";        
     }else{
         document.querySelector('#butCerrar').textContent = "Iniciar SESION";
-        if(e){
-
-            window.location.href= urlLoginHtml;
-        }
     }
 }
