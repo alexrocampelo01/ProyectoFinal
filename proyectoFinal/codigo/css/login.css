@@ -1,6 +1,7 @@
 #butLogin{
     background-color: rgb(158, 14, 14);
-    padding: 1vw;
+    padding: 0.5vw;
     color: white;
     border-radius: 25vw;
+    margin: 1vw;
 }

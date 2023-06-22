@@ -13,7 +13,7 @@
 }
 #informacion a {
   color: black;
-  background-color: aliceblue;
+  background-color: rgb(158, 14, 14);
   padding: 2%;
   text-decoration: none;
   border-radius: 25vw;
@@ -93,7 +93,7 @@ text-align: center;
   background-color: aliceblue;
 }
 .actividad{
-  background-color: crimson;
+  background-color: rgb(158, 14, 14);
   font-size: 100%;
 }
 
