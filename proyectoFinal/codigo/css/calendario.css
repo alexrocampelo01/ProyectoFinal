@@ -105,7 +105,8 @@ text-align: center;
 .informacionAct{
   background-color: lightblue;
   padding: 5%;
-  margin-top: 2vw;
+  margin: 2vw;
+  border-radius: 25vw;
   text-align: left;
 }
 .fondoAzul{
