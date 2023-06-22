@@ -192,7 +192,7 @@ function insertarInfo(actividad){
     console.log(actividad);
     //cremos vaciamos el div
     divInfoAct.innerHTML = " ";
-    
+    divInfoAct.classList.add('fondoAzul');
     //ponemos el titulo
     let divTitulo = document.createElement('h4');
     divTitulo.classList.add('tituloInfo');

@@ -103,9 +103,12 @@ text-align: center;
 }
 
 .informacionAct{
-  background-color: aliceblue;
+  background-color: lightblue;
   padding: 5%;
   margin-top: 2vw;
   text-align: left;
+}
+.fondoAzul{
+  background-color: aliceblue;
 }
 /*estilos calendarios*/
