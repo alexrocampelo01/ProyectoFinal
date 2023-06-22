@@ -1,0 +1,28 @@
+#contenido{
+    background-color:rgba(173, 216, 230, 0.899);
+    height: 100vh;
+    text-align: center;
+    vertical-align: middle;
+}
+#butCrear{
+    background-color: rgb(158, 14, 14);
+    padding: 1vw;
+    color: white;
+    border-radius: 25vw;
+    cursor: pointer;
+}
+a:link{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+#butCancelar{
+    background-color: rgb(158, 14, 14);
+    padding: 1vw;
+    color: white;
+    border-radius: 25vw;
+}

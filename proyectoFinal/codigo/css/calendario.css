@@ -2,6 +2,7 @@
   background-color: lightblue;
   display: flex;
   height: fit-content;
+  border-top: 0.4vw solid black;
 }
 #informacion{
   width: 29%;

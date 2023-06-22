@@ -21,7 +21,7 @@ header i{
     display: none;
 }
 nav {
-    background-color: lightgreen;
+    background-color: lightblue;
     border-radius: 25vw;
     margin: 2%;
 }
@@ -39,5 +39,11 @@ li{
 li a{
     color: black;
     text-decoration: none;
+}
+#butCerrar{
+    background-color: rgb(158, 14, 14);
+    color: white;
+    padding: 0.5vw;
+    border-radius: 25vw;
 }
 /* fin header */
