@@ -40,13 +40,13 @@ function cabeceraCalendario(){ //funciona
     if (mesAnt<0) mesAnt = 11; 
     if (mesSig>11) mesSig = 0; 
     //lo aisnamos a los botones
-    let MesAnterior = document.querySelector('#ant');
-    //console.log(MesAnterior);
-    MesAnterior.textContent= meses[mesAnt];
+    // let MesAnterior = document.querySelector('#ant');
+    // //console.log(MesAnterior);
+    // MesAnterior.textContent= meses[mesAnt];
     //MesAnterior.addEventListener('click', mesAntes);
-    let MesSiguiente = document.querySelector('#sig');
-    //console.log(MesSiguiente);
-    MesSiguiente.textContent= meses[mesSig];
+    // let MesSiguiente = document.querySelector('#sig');
+    // //console.log(MesSiguiente);
+    // MesSiguiente.textContent= meses[mesSig];
     //MesSiguiente.addEventListener('click', mesSiguiente);
 }
 //genermos los nombres de los dias empezando por lunes 
