@@ -34,7 +34,7 @@
   height: 50px;
   /* background-color: chartreuse; */
   text-align: center;
-  font-size: 3vw;
+  font-size: 1vw;
   border: 0.2vw solid black;
   background-color: lightgreen;
   
@@ -99,6 +99,7 @@ text-align: center;
   font-size: 100%;
   padding: 0.2vw;
   color: white;
+  border-radius: 25vw;
 }
 
 .informacionAct{
