@@ -21,8 +21,8 @@
 }
 #calendario{
   width: 69%;
-  margin: 2%;
-  padding: 5%;
+  margin: 1%;
+  padding: 2%;
   /* background-color: aquamarine; */
   align-items: center;
 }
@@ -34,7 +34,7 @@
   height: 50px;
   /* background-color: chartreuse; */
   text-align: center;
-  font-size: 1vw;
+  font-size: 1.5vw;
   border: 0.2vw solid black;
   background-color: lightgreen;
   
@@ -97,7 +97,7 @@ text-align: center;
 .actividad{
   background-color: rgb(158, 14, 14);
   font-size: 100%;
-  padding: 0.2vw;
+  padding: 0.4vw;
   color: white;
   border-radius: 25vw;
 }
