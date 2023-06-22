@@ -33,7 +33,7 @@ function cerrarSesion(e){
     if(localStorage.getItem('jwt')){
         //console.log("hola" +localStorage.getItem('tipoUser'));
         localStorage.removeItem('jwt');
-        e.target.textContent = "Cerrar sesion";     
+        e.target.textContent = "Cerrar Sesion";     
         window.location.href= urlMain;   
     }else{
         e.target.textContent = "Iniciar Sesion";
