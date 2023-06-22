@@ -109,6 +109,9 @@ text-align: center;
   border-radius: 25vw;
   text-align: left;
 }
+.informacionAct h4{
+  text-align: center;
+}
 .fondoAzul{
   background-color: aliceblue;
 }
