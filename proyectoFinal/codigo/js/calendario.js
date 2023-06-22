@@ -177,9 +177,6 @@ function crearInfo(e){
     })
     .then( actividad => {
         if(actividad){
-            let divInfoAct = document.createElement('div');
-            divInfoAct.classList.add('informacionAct');
-            divInformacion.append(divInfoAct);
             console.log("algo");
             //console.log(actividad);
             insertarInfo(actividad[0]);
@@ -188,6 +185,9 @@ function crearInfo(e){
         }
     })
 }
+let divInfoAct = document.createElement('div');
+    divInfoAct.classList.add('informacionAct');
+    divInformacion.append(divInfoAct);
 function insertarInfo(actividad){
     console.log(actividad);
     //cremos vaciamos el div
